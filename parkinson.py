@@ -1,4 +1,10 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Dec  3 18:33:00 2016
 
+@author: abay
+"""
 
 # Import libraries
 import numpy as np
@@ -202,22 +208,19 @@ train_predict(clf3,X_train_150,y_train_150,X_test,y_test)
 print "Gradient Tree Boosting:"
 train_predict(clf4,X_train_150,y_train_150,X_test,y_test)
 
-###################
+
 
 #Data Visualization
 
-#This produces the scatter matrix from my data set. I have commented it out for now.
+pd.scatter_matrix(parkinson_data, alpha = 0.3, figsize = (30,30), diagonal = 'kde');
+pylab.savefig("scatter" + ".png")
 
-
-
-###################
 
 #I got the supervised model to be trained from my data set
 #Now to tune it to get the optimal model for prediction
 
 #Tuning model (Support Vector Machine)
-pd.scatter_matrix(parkinson_data, alpha = 0.3, figsize = (30,30), diagonal = 'kde');
-pylab.savefig("scatter" + ".png")
+
 
 print "Tuning the model. This may take a while....."
 
